@@ -1,3 +1,5 @@
+// 배경사진을 넣는 컴포넌트 
+
 import React from 'react';
 import backgroundImage from './img/main.png'; // 이미지 경로 설정
 

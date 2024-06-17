@@ -1,7 +1,6 @@
 
 import './App.css';
 import Home from './components/Home';
-import BookShapeDiv from './dumcom/BookShapeDiv'
 
 
 function App() {
