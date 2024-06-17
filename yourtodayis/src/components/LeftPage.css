@@ -16,6 +16,9 @@
 }
 .main{
     position: absolute;
-
     left:10px;
+}
+.footer{
+    position: absolute;
+    left:10px
 }
