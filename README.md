@@ -1,4 +1,4 @@
-# IT쇼 출품작
+# 너의 오늘은 
 
 ### 설명 
 ---
@@ -16,7 +16,9 @@
   └── components
 │   └── Home
 │     ├── BackgroundComponent2.jsx
-│     ├── Diary
+│     ├── Diary.jsx
+│     │      ├── LeftPage.jsx
+│     │      └── RightPage.jsx
 │     └── Sidebar
 ├── img : 이미지 파일 
 ├── App.js : Home 컴포넌트 로드
