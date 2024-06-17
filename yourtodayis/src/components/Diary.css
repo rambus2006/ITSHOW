@@ -1,0 +1,27 @@
+
+  /* 페이지 div */
+  .book-shape-div {
+    background-color: #ffffff; /* 하얀색 배경 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 오른쪽 끝과 아래쪽에 그림자 */
+    border-radius: 10px; /* 끝이 둥근 모서리 */
+    width: 80%; /* 너비를 넓혔습니다 */
+    height: 400px; /* 높이를 조정하셔서 원하시는 크기로 설정하세요 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+  }
+  /* 책 중간에 페이지 효과  */
+  .book-shape-line {
+    position: absolute;
+    /* 선 위치 조정 */
+    left: 45%;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #d1d1d1; /* 검정색 선 */
+    filter: blur(5px);
+
+  }
+  

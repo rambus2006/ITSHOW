@@ -1,11 +1,13 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Diary from './components/Diary';
+import Home from './components/Home';
+import BookShapeDiv from './dumcom/BookShapeDiv'
+
 
 function App() {
   return (
     <div className="App">
-      <Diary/>
+      <Home/>
     </div>
   );
 }
