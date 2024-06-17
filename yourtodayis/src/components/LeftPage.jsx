@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './LeftPage.css'
-//import Modal from './Modal'
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import Modal from './Modal'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // 왼쪽페이지 
 function LeftPage(){
@@ -34,8 +34,8 @@ function LeftPage(){
             <h3 className='name'>{firstUserName}의 일기장</h3>
             <hr className='line'/>
         </header>
-        <main>
-          
+        <main className='main'>
+          <Modal/>
         </main>
       </div>
     );

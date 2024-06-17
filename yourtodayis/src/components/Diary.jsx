@@ -1,6 +1,6 @@
 import './Diary.css'
 import LeftPage from './LeftPage';
-import Modal from './Modal.jsx'
+
 
 function Diary() {
   return (
