@@ -18,6 +18,8 @@
 │     ├── BackgroundComponent2.jsx
 │     ├── Diary.jsx
 │     │      ├── LeftPage.jsx
+│     │      │     ├── Moodal.jsx
+│     │      │     └── CommentSection.jsx
 │     │      └── RightPage.jsx
 │     └── Sidebar
 ├── img : 이미지 파일 
