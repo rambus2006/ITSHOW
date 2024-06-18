@@ -41,7 +41,7 @@
 │     │      └── RightPage.jsx
 │     │           ├── 서버를 통해 상대가 쓴 일기를 확인 가능 
 │     │           └── CommentSection.jsx
-│     ├── Home.jsx : 현재 작업중인 파일 
+│     ├── Home.jsx 
 │     └── Sidebar
 ├── img : 이미지 파일 
 ├── App.js : Home 컴포넌트 로드
