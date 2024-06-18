@@ -27,7 +27,17 @@
 ```bash
 ├── public 
 ├── server
-│    └── server.js  :  임의로 만든 배열의 이름 api 가져오는 node.js 코드 
+│     ├── server.js            # 서버 진입점 파일
+│     ├── package.json         # 프로젝트 설정 파일
+│     ├── public/              # 정적 파일 (HTML, CSS, JS 등)
+│     │   └── index.html
+│     ├── routes/              # 라우터 파일
+│     │   └── index.js
+│     ├── controllers/         # 컨트롤러 파일
+│     │   ├── userController.js
+│     │   └── messageController.js
+│     └── data/                # 데이터 파일
+│          └── users.js
 ├── src
   └── components
 │   └── Home
