@@ -8,11 +8,12 @@ import Login from './Login';
 function App() {
   
   return (
-    <div className="App">
-      <Login/>
-      <Home/>
-      {/* <Lender/> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 

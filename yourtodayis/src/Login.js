@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      navigate('/home');
+      navigate('/components/home');
     } catch (error) {
       console.error("로그인 실패:", error);
     }
