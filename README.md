@@ -2,6 +2,8 @@
 
 ### demo 
 ---
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/763a39df-379e-4605-8356-9cdcdda403dc)
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/2e6117e2-700e-49bf-84fd-d89e9af9ede2)
 (앨범 추가해야 함)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/f3b8438b-c1a6-407b-bf47-75c534a7b325)
 
@@ -37,6 +39,8 @@
 │     │      │     ├── Moodal.jsx
 │     │      │     └── CommentSection.jsx
 │     │      └── RightPage.jsx
+│     │           ├── 서버를 통해 상대가 쓴 일기를 확인 가능 
+│     │           └── CommentSection.jsx
 │     ├── Home.jsx : 현재 작업중인 파일 
 │     └── Sidebar
 ├── img : 이미지 파일 
