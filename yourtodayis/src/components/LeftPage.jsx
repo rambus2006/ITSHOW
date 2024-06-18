@@ -8,13 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function LeftPage() {
   const [firstUserName, setFirstUserName] = useState('');
   const [diaryText, setDiaryText] = useState(''); // 입력된 일기 내용을 상태로 관리
-  const [dataFromChild, setDataFromChild] = useState('');
+  // const [dataFromChild, setDataFromChild] = useState('');
 
-  const handleDataFromChild = (data) => {
-    // 자식 컴포넌트에서 전달한 데이터 처리
-    console.log('Data from child:', data);
-    setDataFromChild(data); // 부모 컴포넌트 상태 업데이트
-  };
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,14 +34,13 @@ function LeftPage() {
 
   const handleSaveDiary = () => {
     // 저장 버튼 클릭 시 diaryText 상태를 출력
-    alert(diaryText);
+    
     // 또는 다른 방식으로 출력할 수 있음 (예: 모달창 등)
   };
 
   const handleDiaryInputChange = (e) => {
     setDiaryText(e.target.value); // 입력된 텍스트를 diaryText 상태에 업데이트
   };
-
   return (
     <div>
       <header className='header'>
@@ -53,12 +48,12 @@ function LeftPage() {
         <hr className='line' />
       </header>
       <main className='main'>
+        
         {/* Modal 컴포넌트 */}
         <Modal
           diaryText={diaryText} // 입력된 일기 내용을 Modal 컴포넌트로 전달
           onDiaryInputChange={handleDiaryInputChange} // 입력 변경 이벤트 핸들러 전달
           onSaveDiary={handleSaveDiary} // 저장 버튼 클릭 이벤트 핸들러 전달
-          sendDataToParent={handleDataFromChild}
         />
         {/* 댓글 기능(정렬이 안되서 보류) */}
         <CommentSection/>
