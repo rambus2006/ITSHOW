@@ -3,6 +3,7 @@
 ### demo 
 ---
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/c0ea0b39-770b-420b-baa2-83a7a106ddcb)
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/b336c446-2d56-4786-b99f-bd75c02e4580)
 
 
 ### 프로젝트 스펙 
@@ -32,6 +33,7 @@
 │     │      │     ├── Moodal.jsx
 │     │      │     └── CommentSection.jsx
 │     │      └── RightPage.jsx
+│     ├── Home.jsx : 현재 작업중인 파일 
 │     └── Sidebar
 ├── img : 이미지 파일 
 ├── App.js : Home 컴포넌트 로드
