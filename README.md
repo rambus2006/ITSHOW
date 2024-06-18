@@ -2,6 +2,12 @@
 
 ### demo 
 ---
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/c0ea0b39-770b-420b-baa2-83a7a106ddcb)
+
+
+### 프로젝트 스펙 
+- Front : React (localhost:3000)
+- Back : node.js (localhost:4000)
 
 ### 컴포넌트 별 설명 
 | 컴포넌트명| 기능 | 세부기능(관련파일) | 설명 |
@@ -12,12 +18,19 @@
 
 ### 파일구조
 ```bash
+├── public 
+├── server
+│    └── server.js  :  임의로 만든 배열의 이름 api 가져오는 node.js 코드 
 ├── src
   └── components
 │   └── Home
 │     ├── BackgroundComponent2.jsx
-│     ├── Diary.jsx
+│     ├── Login.jsx : 처음 들어갔을 때의 화면
+│     │
+│     ├── Diary.jsx : server.js 에서 이름 fetch 해서 가져와서 표시해주는 리액트 코드 
 │     │      ├── LeftPage.jsx
+│     │      │     ├── Moodal.jsx
+│     │      │     └── CommentSection.jsx
 │     │      └── RightPage.jsx
 │     └── Sidebar
 ├── img : 이미지 파일 
