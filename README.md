@@ -33,6 +33,7 @@
 │     │      │     ├── Moodal.jsx
 │     │      │     └── CommentSection.jsx
 │     │      └── RightPage.jsx
+│     ├── Home.jsx : 현재 작업중인 파일 
 │     └── Sidebar
 ├── img : 이미지 파일 
 ├── App.js : Home 컴포넌트 로드
