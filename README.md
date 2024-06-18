@@ -16,18 +16,38 @@
 - Front : React (localhost:3000)
 - Back : node.js (localhost:4000)
 
-### 컴포넌트 별 설명 
+### FE별 설명 
 | 컴포넌트명| 기능 | 세부기능(관련파일) | 설명 |
 |---|---|---|---|
 |BackgroundComponent2.jsx|배경이미지||배경이미지를 보여주는 컴포넌트|
 |Diary.jsx|일기장|Diary.css|내용 8|
 |내용 9|내용 10|내용 11|내용 12|
 
+### BE별 설명
+|폴더| 파일명 | 기능설명 | 비고 |
+|---|---|---|---|
+| - |server.js |서버에 처음 진입했을 때 실행되는 파일 ||
+| routes | index.js | 기본 라우터 파일||
+| routes | messages.js | 메시지를 보냈을 때 처리하는 라우터 파일||
+| controllers |userController.js| 유저 정보 컨트롤러 ||
+| controllers |messageController.js|메시지 정보 컨트롤러||
+| data | user.js | 임의의 유저 정보 api|
+
 ### 파일구조
 ```bash
 ├── public 
 ├── server
-│    └── server.js  :  임의로 만든 배열의 이름 api 가져오는 node.js 코드 
+│     ├── server.js            # 서버 진입점 파일
+│     ├── package.json         # 프로젝트 설정 파일
+│     ├── public/              # 정적 파일 (HTML, CSS, JS 등)
+│     │   └── index.html
+│     ├── routes/              # 라우터 파일
+│     │   └── index.js
+│     ├── controllers/         # 컨트롤러 파일
+│     │   ├── userController.js
+│     │   └── messageController.js
+│     └── data/                # 데이터 파일
+│          └── users.js
 ├── src
   └── components
 │   └── Home
