@@ -1,6 +1,6 @@
 import './Diary.css'
 import LeftPage from './LeftPage';
-
+import RightPage from './RightPage';
 
 function Diary() {
   return (
@@ -9,6 +9,7 @@ function Diary() {
         {/* 페이지 선 div */}
       <LeftPage/>
       <div className="book-shape-line"></div>
+      <RightPage/>
     </div>
   );
 }

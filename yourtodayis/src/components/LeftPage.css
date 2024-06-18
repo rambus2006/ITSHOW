@@ -17,8 +17,8 @@
 .main{
     position: absolute;
     left:10px;
-}
-.footer{
-    position: absolute;
-    left:10px
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 200px;
 }

@@ -60,11 +60,11 @@ function LeftPage() {
           onSaveDiary={handleSaveDiary} // 저장 버튼 클릭 이벤트 핸들러 전달
           sendDataToParent={handleDataFromChild}
         />
-      </main>
-      <footer>
         {/* 댓글 기능(정렬이 안되서 보류) */}
         <CommentSection/>
-      </footer>
+      
+      </main>
+      
     </div>
   );
 }
