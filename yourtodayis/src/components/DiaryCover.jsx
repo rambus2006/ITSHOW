@@ -3,7 +3,7 @@ import LeftPage from './LeftPage';
 import RightPage from './RightPage';
 import BackgroundComponent from './BackgroundComponent2.jsx';
 
-function Diary() {
+function DiaryCover() {
   return (
     <>
     {/* // 페이지 div  */}
@@ -11,7 +11,6 @@ function Diary() {
         {/* 페이지 선 div */}
       <LeftPage/>
       <div className="book-shape-line"></div>
-      
       <RightPage/>
     </div>
     <BackgroundComponent/>
@@ -21,6 +20,6 @@ function Diary() {
   );
 }
 
-export default Diary;
+export default DiaryCover;
 
 
