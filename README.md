@@ -2,6 +2,8 @@
 
 ### demo 
 ---
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/c0ea0b39-770b-420b-baa2-83a7a106ddcb)
+
 
 ### 컴포넌트 별 설명 
 | 컴포넌트명| 기능 | 세부기능(관련파일) | 설명 |
