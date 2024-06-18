@@ -27,6 +27,10 @@ function Modal2({ sendDataToParent }) {
     console.log("content", inputText)
     const htmlCode = `<p>${inputText}</p>`; // Create HTML string
     setHtmlContent(htmlCode); // Store HTML content in state
+
+    
+
+
     handleCloseModal(); // 모달 닫기
   };
 
