@@ -37,8 +37,24 @@ function LeftPage() {
   }, []); // 빈 배열을 전달하여 한 번만 실행되도록 설정 (컴포넌트가 마운트될 때만 실행)
 
   const handleSaveDiary = () => {
-    // 저장 버튼 클릭 시 diaryText 상태를 출력
-    alert(diaryText);
+    // // 저장 버튼 클릭 시 diaryText 상태를 출력
+    // const diaryEntry = {
+    //   id: 1,
+    //   content: diaryText,
+    // };
+    // // JSON 형식으로 변환
+    // const jsonContent = JSON.stringify(diaryEntry);
+
+    // // 서버에 저장할 경우 (예시: axios를 사용한 POST 요청)
+    // axios.post('/save-diary', { data: jsonContent })
+    // .then(response => {
+    //   console.log('일기가 성공적으로 저장되었습니다.');
+    // })
+    // .catch(error => {
+    //   console.error('일기 저장 중 오류가 발생했습니다:', error);
+    // });
+
+
     // 또는 다른 방식으로 출력할 수 있음 (예: 모달창 등)
   };
 

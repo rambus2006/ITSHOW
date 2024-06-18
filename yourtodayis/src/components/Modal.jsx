@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import './Modal.module.css'; // 스타일 파일
 
-
 function Modal2({ sendDataToParent }) {
   const [showModal, setShowModal] = useState(false);
   const [inputText, setInputText] = useState(''); // 입력된 텍스트를 상태로 관리
+  const [inputHTML, setInputHTML] = useState('<p>일기를 작성하세요.</p>'); // 입력된 텍스트의 HTML
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -20,13 +20,14 @@ function Modal2({ sendDataToParent }) {
   };
 
   const handleSaveChanges = () => {
+    const generatedHTML = `<p>${inputText}</p>`;
+    setInputHTML(generatedHTML); // HTML 업데이트
     handleCloseModal();
   };
 
-
   return (
     <div className="Modal">
-      <p className='inputText' onClick={handleOpenModal}>일기를 작성하세요.</p>
+      <p className='inputText' onClick={handleOpenModal} dangerouslySetInnerHTML={{ __html: inputHTML }}></p>
 
       <Modal show={showModal} onHide={handleCloseModal} className="texttoleft">
         <Modal.Header closeButton>
