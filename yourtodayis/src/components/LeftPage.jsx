@@ -34,7 +34,6 @@ function LeftPage() {
 
   const handleSaveDiary = () => {
     // 또는 다른 방식으로 출력할 수 있음 (예: 모달창 등)
-    
   };
 
   const handleDiaryInputChange = (e) => {

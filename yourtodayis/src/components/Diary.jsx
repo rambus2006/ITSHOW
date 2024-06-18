@@ -10,9 +10,8 @@ function Diary() {
     <div className="book-shape-div">
         {/* 페이지 선 div */}
       <LeftPage/>
-      <div className="book-shape-line"></div>
-      {/* <RightPage/> */}
-    </div>
+      <div className="book-shape-line"></div>    
+      </div>
     <BackgroundComponent/>
     </>
     
