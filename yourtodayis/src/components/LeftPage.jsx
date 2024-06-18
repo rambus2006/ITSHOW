@@ -4,6 +4,7 @@ import './LeftPage.css';
 import Modal from './Modal';
 import CommentSection from './CommentSection'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import SocketModel from './SocketModel';
 
 function LeftPage() {
   const [firstUserName, setFirstUserName] = useState('');

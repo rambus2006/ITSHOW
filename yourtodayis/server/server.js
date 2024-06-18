@@ -2,7 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
+
 const PORT = 4000;
+
 
 // 라우터 설정
 const indexRouter = require('./routes/index');

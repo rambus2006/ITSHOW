@@ -1,53 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import style from './RightPage.module.css';
 
 function RightPage() {
-  const [diaryEntries, setDiaryEntries] = useState([]);
-  const [message, setMessage] = useState('');
-  const [inputText, setInputText] = useState('');
-
+  const [secondUserName, setSecondUserName] = useState('');
+  
   useEffect(() => {
-    fetchDiaryEntries();
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000'); // 데이터를 가져올 URL
+        if (response.data.length > 0) {
+          alert(response.data[1].name)
+          setSecondUserName(response.data[1].name); // 첫 번째 데이터의 이름을 상태에 저장
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-  const fetchDiaryEntries = async () => {
-    try {
-      const response = await axios.get('http://localhost:4000/api/diary');
-      setDiaryEntries(response.data);
-    } catch (error) {
-      console.error('Failed to fetch diary entries:', error);
-    }
-  };
+    fetchData(); // 데이터 가져오는 함수 호출
 
-  const handleSaveDiary = async () => {
-    try {
-      const response = await axios.post('http://localhost:4000/api/diary', {
-        message: inputText
-      });
-      setMessage(response.data.message);
-      fetchDiaryEntries(); // 데이터 갱신
-    } catch (error) {
-      console.error('Failed to save diary:', error);
-    }
-  };
+    // cleanup 함수 (선택사항): 컴포넌트가 언마운트될 때 호출됨
+    return () => {
+      // cleanup 코드 (예: 타이머나 구독 해제)
+    };
+  }, []); // 빈 배열을 전달하여 한 번만 실행되도록 설정 (컴포넌트가 마운트될 때만 실행)
 
-  const handleInputChange = (e) => {
-    setInputText(e.target.value);
-  };
 
+  
   return (
     <div>
-      <h1>일기 목록</h1>
-      <ul>
-        {diaryEntries.map(entry => (
-          <li key={entry.id}>{entry.message}</li>
-        ))}
-      </ul>
-      <input type="text" value={inputText} onChange={handleInputChange} />
-      <button onClick={handleSaveDiary}>일기 저장</button>
-      {message && <p>{message}</p>}
-    </div>
-  );
+      <header className={style.header}>
+        <h3 className={style.Rname}>{secondUserName}의 일기장</h3>
+        <hr className={style.line} />
+      </header>
+      <main className={style.main}>
+      
+        
+      </main>
+      </div>
+    )
 }
-
 export default RightPage;
