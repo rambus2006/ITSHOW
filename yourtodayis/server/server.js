@@ -6,17 +6,19 @@ const PORT = 4000;
 
 // 라우터 설정
 const indexRouter = require('./routes/index');
-const messageRouter = require('./routes/messages');
+const diaryRouter = require('./routes/diary');
 
-// 미들웨어
+// 미들웨어 등록
 app.use(cors({
-  origin: 'http://localhost:3000' // 허용할 출처를 여기에 지정
+  origin: 'http://localhost:3000'
 }));
 app.use(bodyParser.json());
 
-// indexRouter로 이동할 수 있게 연결 
+// 기본 경로로 이동할 수 있도록 설정 
 app.use('/', indexRouter);
-app.use('/api/messages', messageRouter);
+
+// /api/diary 경로에 diaryRouter 등록
+app.use('/api/diary', diaryRouter);
 
 // 서버 시작
 app.listen(PORT, () => {
