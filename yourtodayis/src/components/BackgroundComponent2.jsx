@@ -13,7 +13,6 @@ const BackgroundComponent = () => {
     position: 'fixed', /* 화면에 고정된 위치 */
     top: 0,
     left: 0,
-    
     zIndex: -1 /* LoginForm보다 뒤에 배치 */
 
   };

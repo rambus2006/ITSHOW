@@ -29,10 +29,16 @@ function Modal2({ sendDataToParent }) {
     console.log("content", inputText)
     const htmlCode = `<p>${inputText}</p>`; // Create HTML string
     setHtmlContent(htmlCode); // Store HTML content in state
-
     
-
-
+    //서버에다가 내용 보내야 하는 부분 코드 
+  // 저장 버튼 클릭 시 diaryText 상태를 출력
+      const diaryEntry = {
+        id: 1,
+        message: inputText
+      };
+      // JSON 형식으로 변환
+      const jsonContent = JSON.stringify(diaryEntry);
+      console.log(jsonContent)
     handleCloseModal(); // 모달 닫기
 
   };

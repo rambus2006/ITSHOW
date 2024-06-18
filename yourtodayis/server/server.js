@@ -1,44 +1,22 @@
-// server.js 파일에 아래 코드 추가
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = 4000; // 사용할 포트 번호
+const PORT = 4000;
 
-// 더미 데이터 예시 (배열 형태)
-const users = [
-  { id: 1, name: 'John Doe', email: 'john.doe@example.com' },
-  { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com' },
-  { id: 3, name: 'Mike Johnson', email: 'mike.johnson@example.com' }
-];
-app.use(cors());
+// 라우터 설정
+const indexRouter = require('./routes/index');
+const messageRouter = require('./routes/messages');
+
+// 미들웨어
 app.use(cors({
   origin: 'http://localhost:3000' // 허용할 출처를 여기에 지정
 }));
-
 app.use(bodyParser.json());
-// 메시지 저장을 위한 변수 (간단히 메모리에 저장)
-let message = '';
 
-// POST 요청 처리
-app.post('/api/messages', (req, res) => {
-  const { htmlContent } = req.body;
-  message = htmlContent; // 메시지 저장
-
-  // 클라이언트에 성공 응답 보내기
-  res.status(200).json({ message: '메시지가 성공적으로 저장되었습니다.' });
-});
-
-// GET 요청 처리 (메시지 읽기)
-app.get('/api/messages', (req, res) => {
-  res.status(200).json({ message });
-});
-
-
-// GET 요청에 대한 라우트 정의
-app.get('/', (req, res) => {
-  res.json(users); // users 배열을 JSON 형태로 반환
-});
+// indexRouter로 이동할 수 있게 연결 
+app.use('/', indexRouter);
+app.use('/api/messages', messageRouter);
 
 // 서버 시작
 app.listen(PORT, () => {

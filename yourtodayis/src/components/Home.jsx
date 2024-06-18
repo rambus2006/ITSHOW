@@ -3,7 +3,7 @@ import BackgroundComponent from './BackgroundComponent2.jsx';
 import BackgroundComponent3 from './BackgroundComponent3.jsx';
 import DiaryCover from './img/DiaryCover.png'; // 이미지 경로 설정
 import './Home.css';
-import Diary from './Diary.jsx';
+import DiaryPage from './DiaryPage.jsx';
 import per1img from './img/p1img.png'
 import per2img from './img/p2img.png'
 import lineimg from './img/line.png'
@@ -54,7 +54,7 @@ function Home() {
             </div>
           ) : (
             <div className="DiaryContainer">
-              <Diary onClose={handleCloseDiary} />
+              <DiaryPage handleCloseDiary={handleCloseDiary}/>
             </div>
           )}
         </div>
