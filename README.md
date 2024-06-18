@@ -2,6 +2,10 @@
 
 ### demo 
 ---
+(앨범 추가해야 함)
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/f3b8438b-c1a6-407b-bf47-75c534a7b325)
+
+
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/c0ea0b39-770b-420b-baa2-83a7a106ddcb)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/b336c446-2d56-4786-b99f-bd75c02e4580)
 
