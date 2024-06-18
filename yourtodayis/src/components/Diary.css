@@ -3,7 +3,7 @@
   background-color: #ffffff; /* 하얀색 배경 */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 오른쪽 끝과 아래쪽에 그림자 */
   border-radius: 10px; /* 끝이 둥근 모서리 */
-  width: 1200px; /* 너비를 넓혔습니다 */
+  width: 1400px; /* 너비를 넓혔습니다 */
   height: 800px; /* 높이를 조정하셔서 원하시는 크기로 설정하세요 */
   display: flex;
   position: absolute;

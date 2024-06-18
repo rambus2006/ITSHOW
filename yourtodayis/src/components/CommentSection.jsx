@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CommentSection.module.css'; // 컴포넌트에 대한 CSS 파일
+import './CommentSection.module.css'; // CSS 모듈 import
 
 function CommentSection() {
   const [comments, setComments] = useState([]); // 댓글 목록을 관리할 상태
@@ -29,15 +29,13 @@ function CommentSection() {
   };
 
   return (
-    <div className="comment-section">
-      
-      <form onSubmit={handleSubmit}>
-        <textarea name="comment" rows="4" placeholder="댓글을 입력하세요..." required></textarea>
-        <br />
+    <div className="commentSection">
+      <form onSubmit={handleSubmit} className="form">
+        <textarea name="comment" rows="1" cols="50" placeholder="댓글을 입력하세요..." required></textarea>
         <button type="submit">댓글 달기</button>
       </form>
 
-      <div className="comment-list">
+      <div className="commentList">
         {comments.length === 0 ? (
           <p>댓글이 없습니다.</p>
         ) : (

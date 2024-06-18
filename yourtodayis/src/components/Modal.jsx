@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import './Modal.module.css'; // 스타일 파일
 
+
 function Modal2({ sendDataToParent }) {
   const [showModal, setShowModal] = useState(false);
   const [inputText, setInputText] = useState(''); // 입력된 텍스트를 상태로 관리
