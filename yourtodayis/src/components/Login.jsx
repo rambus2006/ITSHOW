@@ -6,11 +6,29 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
     // 여기에 로그인 로직 추가
-    console.log('Username:', username);
-    console.log('Password:', password);
+ 
+    try {
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log('Login response:', data);
+      // 여기서 서버의 응답을 처리할 수 있습니다.
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
   };
 
   return (
