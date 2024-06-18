@@ -12,7 +12,6 @@ function Diary() {
       <LeftPage/>
       <div className="book-shape-line"></div>
       
-      <RightPage/>
     </div>
     <BackgroundComponent/>
     </>
@@ -22,5 +21,4 @@ function Diary() {
 }
 
 export default Diary;
-
 
