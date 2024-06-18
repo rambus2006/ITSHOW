@@ -25,6 +25,8 @@
   └── components
 │   └── Home
 │     ├── BackgroundComponent2.jsx
+│     ├── Login.jsx : 처음 들어갔을 때의 화면
+│     │
 │     ├── Diary.jsx : server.js 에서 이름 fetch 해서 가져와서 표시해주는 리액트 코드 
 │     │      ├── LeftPage.jsx
 │     │      │     ├── Moodal.jsx
