@@ -5,6 +5,7 @@ import './Modal.module.css'; // 스타일 파일
 function Modal2({ sendDataToParent }) {
   const [showModal, setShowModal] = useState(false);
   const [inputText, setInputText] = useState(''); // 입력된 텍스트를 상태로 관리
+
   const [htmlContent, setHtmlContent] = useState('일기를 입력하세요');
 
   // window.localStorage.setItem("content", "일기를 입력하세요")
@@ -22,6 +23,7 @@ function Modal2({ sendDataToParent }) {
 
   // 입력한 일기 내용을 html 요소에 추가하는 함수 
   const handleSaveChanges = () => {
+
     //sendDataToP/arent(inputText); // 부모 컴포넌트에 입력된 텍스트 전달
     // const htmlCode = `<p>{inputText}</p>`
     console.log("content", inputText)
@@ -32,11 +34,11 @@ function Modal2({ sendDataToParent }) {
 
 
     handleCloseModal(); // 모달 닫기
+
   };
 
   return (
-    <div className="Modal">
-    
+    <div className="Modal">    
     <p className='inputText' onClick={handleOpenModal} > <div dangerouslySetInnerHTML={{ __html: htmlContent }} /></p>
 
       <Modal show={showModal} onHide={handleCloseModal} className="texttoleft">
