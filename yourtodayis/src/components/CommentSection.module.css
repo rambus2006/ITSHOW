@@ -1,7 +1,7 @@
 .comment-section {
     margin: 20px;
   }
-  
+
   .comment-section form {
     display: flex;
     flex-direction: row; /* 수평 정렬을 위해 row로 설정 */
@@ -49,4 +49,11 @@
     border: 1px solid #ccc; /* 리스트 아이템의 경계 설정 */
     border-radius: 5px; /* 리스트 아이템의 모서리를 둥글게 함 */
   }
+/* 
+.commentList  li{
+  list-style: none;
+  display: block;
+  position: absolute;
+  right: 20vh;
   
+} */

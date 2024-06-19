@@ -40,8 +40,8 @@ function CommentSection() {
           <p>댓글이 없습니다.</p>
         ) : (
           <ul>
-            {comments.map((comment) => (
-              <li key={comment.id}>
+            {comments.map((comment,idx) => (
+              <li key={comment.id} >
                 <strong>{comment.createdAt}</strong>: {comment.text}
               </li>
             ))}
@@ -50,6 +50,6 @@ function CommentSection() {
       </div>
     </div>
   );
-}
 
+}
 export default CommentSection;

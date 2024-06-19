@@ -11,7 +11,7 @@
     text-align: center;
     align-items: center; /* 세로 방향으로 가운데 정렬 */
     width:80vw;
-    height:70vh;
+    height:72vh;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr; /* 세로 3등분 */
     grid-template-rows: 1fr 1.2fr; /*가로 2등분 */

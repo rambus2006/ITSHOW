@@ -1,15 +1,9 @@
-import React, { useState } from 'react'; // useState를 React에서 가져옵니다.
+import React, { useState } from 'react';
 import './Sidebar.css';
-// import '@fortawesome/fontawesome-free/css/all.min.css'; // Font Awesome CSS 파일 포함
-
 
 const Sidebar = () => {
   const [profilePicture, setProfilePicture] = useState('https://i.pinimg.com/236x/0f/02/c8/0f02c8c4ccfd3d85e39dbf25aca6ac9c.jpg');
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleChangePicture = (event) => {
     const file = event.target.files[0];
@@ -23,9 +17,12 @@ const Sidebar = () => {
   };
 
   const handleGoBack = () => {
-    // 여기에 이전 화면으로 이동하는 로직을 추가하세요.
-    // 예를 들어, react-router-dom을 사용한다면 history.goBack()을 호출할 수 있습니다.
-    console.log('이전 화면으로 이동');
+    // 이전 페이지로 이동하는 로직
+    console.log('이전 페이지로 이동');
+  };
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   const getCurrentDate = () => {
@@ -37,21 +34,10 @@ const Sidebar = () => {
   };
 
   return (
-    <div className={`sidebar ${isChecked ? 'sidebar-closed' : ''}`}>
-      <div className="center">
-      <input 
-        type="checkbox" 
-        id="menuicon" 
-        checked={!isChecked} 
-        onChange={handleCheckboxChange}
-      />
-      <label htmlFor="menuicon">
-        <span className={!isChecked ? 'top' : ''}></span>
-        <span className={!isChecked ? 'middle' : ''}></span>
-        <span className={isChecked ? 'bottom' : ''}></span>
-      </label>
-    </div>
-
+    <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+      <div className="hamburger-menu" onClick={toggleSidebar}>
+        <i className={`fas ${isSidebarOpen ? 'fa-times' : 'fa-bars'}`}></i>
+      </div>
       <div className="profile">
         <input
           type="file"
@@ -67,11 +53,11 @@ const Sidebar = () => {
             className="profile-picture"
             onClick={() => document.getElementById('profile-picture-input').click()}
           />
-          <button className="go-back-button" onClick={handleGoBack}>
-            <i className="fas fa-arrow-left"></i>
-          </button>
         </div>
-        <h2>너와 나의 일기</h2><br></br>
+        <button className="go-back-button" onClick={handleGoBack}>
+          <i className="fas fa-arrow-left"></i> 뒤로 가기
+        </button>
+        <h2>너와 나의 일기</h2>
         <h3>D + 100</h3>
         <div className="date"><h4>{getCurrentDate()}</h4></div>
       </div>
