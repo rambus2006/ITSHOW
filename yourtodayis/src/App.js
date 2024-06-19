@@ -1,27 +1,20 @@
 
-import Home from './components/Home';
-import Index from './components/index';
-import Diary from './components/Diary';
-import Login from './components/Login';
-import Album from './components/Album';
-import Socket from './components/Socket';
-import SocketModel from './components/SocketModel';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//import Login from /'./components/Login';
 import Logintest from './components/Logintest';
+import Home from './components/Home';
+import Diary from './components/Diary';
+const Router = () => {
+	return (
+	<BrowserRouter>                                    
+      <Routes>                                           
+        <Route path='/' element={<Logintest/>} />       
+        <Route path='/Home' element={<Home/>}/>
+        <Route path='/Diary' element={<Diary/>}/>
+      </Routes>
+    </BrowserRouter>
+	);
+};
 
-function App() {
-  
-  return (
-    <div className="App">
-      {/* <Home/> */}
-      {/* <Diary/> */}
-      {/* <Login/> */}
-      <Logintest/>
-      {/* <Index/> */}
-      {/* <Album/> */}
-      {/* <Socket/> */}
-      {/* <SocketModel/> */}
-    </div>
-  );
-}
-
-export default App;
+export default Router;

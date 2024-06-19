@@ -9,14 +9,16 @@ import per2img from './img/p2img.png'
 import lineimg from './img/line.png'
 
 function Home() {
-  const [showDiary, setShowDiary] = useState(false);
+  
 
   const handleImageClick = () => {
-    setShowDiary(true);
+    window.location.href="http://localhost:3000/Diary"
+    
+
   };
-  const handleCloseDiary = () => {
-    setShowDiary(false);
-  };
+  // const handleCloseDiary = () => {
+    
+  // };
   return (
     <div className="Home">
       <div className='elements'>
@@ -48,15 +50,11 @@ function Home() {
           {/* </div> */}
           {/* 표지  */}
           {/* 다이어리 & 앨범이동 */}
-          {!showDiary ? (
+          
             <div className="img-container" onClick={handleImageClick}>
-              <img src={DiaryCover} alt="Diary Cover" />
+              <img src={DiaryCover} alt="Diary Cover"/>
             </div>
-          ) : (
-            <div className="DiaryContainer">
-              <DiaryPage handleCloseDiary={handleCloseDiary}/>
-            </div>
-          )}
+          
         </div>
       </div>
       

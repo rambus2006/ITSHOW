@@ -3,10 +3,12 @@ const cors = require('cors');
 const http = require('http');
 const socketIo = require('socket.io');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 4000;
 
+// 로그인 화면
 // 더미 데이터 예시 (배열 형태)
 const users = [
   { id: 1, name: 'John Doe', email: 'john.doe@example.com', password: 'alflaAkrh'},
@@ -14,10 +16,9 @@ const users = [
   { id: 3, name: 'Mike Johnson', email: 'mike.johnson@example.com', password: 'alflaAkrh'}
 ];
 
-let loggedInUsers = [];
-
 // CORS 설정
 app.use(cors({
+  credentials: true,
   origin: 'http://localhost:3000' // 허용할 출처를 여기에 지정
 }));
 
@@ -55,10 +56,19 @@ io.on('connection', (socket) => {
 // React 정적 파일 제공
 app.use(express.static(path.join(__dirname, 'build')));
 
-// 모든 요청을 React 앱으로 라우팅
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+//추가한 부분
+app.use(bodyParser.json());
+
+// 라우터 설정
+const indexRouter = require('./routes/index');
+const diaryRouter = require('./routes/diary');
+
+// 기본 경로로 이동할 수 있도록 설정 
+app.use('/', indexRouter);
+
+// /api/diary 경로에 diaryRouter 등록
+app.use('/api/diary', diaryRouter);
+//추가한 부분 끝 
 
 // 서버 시작
 server.listen(PORT, () => {

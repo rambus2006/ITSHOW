@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import styles from './Login.module.css'; // CSS 파일 import
 
@@ -15,6 +15,7 @@ const Logintest = () => {
     socket.on('loginResponse', (response) => {
       if (response.success) {
         alert('로그인 성공');
+        window.location.href="http://localhost:3000/Home"
       } else {
         alert('로그인 실패');
       }
@@ -26,50 +27,49 @@ const Logintest = () => {
       socket.off('loginResponse');
     };
   }, []);
-  const handleLogin = () => {
-    socket.emit('login', { email, password });
 
-    socket.on('loginResponse', (response) => {
-      setLoginMessage(response.message);
-    });
+  const handleLogin = (e) => {
+    e.preventDefault(); // 폼 submit 기본 동작 막기
+
+    socket.emit('login', { email, password });
   };
 
   return (
     <div>
-    <div className={styles.logincontainer}>
+
+      <div className={styles.logincontainer}>
         <BackgroundComponent />
         <div className={styles.LoginForm}>
-        <form onSubmit={handleLogin} className={styles.Loginform}>
+          <form onSubmit={handleLogin} className={styles.Loginform}>
             <div className={styles.title}>
-            <h2 className={styles.h2text}>Login</h2>
+              <h2 className={styles.h2text}>Login</h2>
             </div>
             <div className={styles.inputGroup}>
-            <label htmlFor="useremail" className={styles.label}>Useremail:</label>
-            <input 
+              <label htmlFor="useremail" className={styles.label}>Useremail:</label>
+              <input 
                 type="text" 
                 id="useremail" 
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className={styles.input} 
-            />
+              />
             </div>
             <div className={styles.inputGroup}>
-            <label htmlFor="password" className={styles.label}>Password:</label>
-            <input 
+              <label htmlFor="password" className={styles.label}>Password:</label>
+              <input 
                 type="password" 
                 id="password" 
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-            />
+              />
             </div>
-            <button type="submit" className={styles.button1}>Login</button>
-        </form>
+            <button  type="submit" className={styles.button1}>Login</button>
+          </form>
         </div>
-        </div>
+      </div>
     </div>
-    
   );
 };
 
