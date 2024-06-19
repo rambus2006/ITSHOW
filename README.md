@@ -2,7 +2,9 @@
 
 ### demo 
 ---
-![image](https://github.com/rambus2006/ITSHOW/assets/101540710/763a39df-379e-4605-8356-9cdcdda403dc)
+(press to start 깜박거리게는 되는데 제목 아래로 보내는 법을 모르겠음) 
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/717f9a4b-09df-4f01-9d57-89e62fbfd252)
+
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/2e6117e2-700e-49bf-84fd-d89e9af9ede2)
 (앨범 추가해야 함)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/f3b8438b-c1a6-407b-bf47-75c534a7b325)
