@@ -1,97 +1,46 @@
-
-.image-container {
-    position: relative;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-}
-.image{
-    width: 100vw;
-    height: 100vh;
-    /* background-image: url('img/EZZE Design Image (1).png'); */
-    background-size: cover;
-}
-.diary {
-    position: absolute;
-    top: 10%;
-    left: 22%;
-    width: auto;
-    border-radius: 15px 0 0 15px;
-    color: black;
-    justify-content: left;
-    align-items: left;
-    display: grid;
-    grid-template-areas:
-    "diary-header diary-rightheader"
-    "diary-body diary-rightbody"
-    "diary-footer diary-rightfooter";
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 0 15px 15px 0;
-}
-.search_in{display: block;margin: 4px 79px 0 10px;} 
-.search_in input{
-    display: block;
-    width: 100%;
-    min-height: 100px;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    overflow: auto;
-}
-.bottom-border {
-    border-width: 0 0 1px;
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
   }
-.diary-leftpage{
-    width:31vw;
-}
-.diary-header{
-    grid-area:"diary-header";
-    height:4vh;
-    background-color: whitesmoke;
-    text-align: center;
-    border-radius: 15px 0 0 0;
-    border-bottom: 2px solid #000; 
-}
-.diary-body{
-    grid-area:"diary-body";
-    height:50vh;
-    background-color: white;
-}
-.diary-footer{
-    grid-area:"diary-footer";
-    height:20vh;
-    background-color:rgb(236, 236, 236);
-    border-radius: 0 0 0 15px;
-}
-.diary-rightpage{
-    /* //border-image: linear-gradient(to right, gray, white); 그라데이션을 테두리에 적용하는 부분 */
-    /* border-images-slice: 3px; 테두리 이미지를 잘라서 적용하는 부분 */
-    border-left: 2px solid rgb(98, 98, 98);
-
-}
-.diary-rightheader{
-    grid-area:"diary-header";
-    height:4vh;
-    background-color: whitesmoke;
-    text-align: center;
-    border-radius: 0 15px 0 0;
-    border-bottom: 2px solid #000; 
-    
-}
-.diary-rightbody{
-    grid-area:"diary-body";
-    height:50vh;
-    background-color: white;
-    
-
-}
-.diary-rightfooter{
-    grid-area:"diary-footer";
-    height:20vh;
-    background-color:rgb(236, 236, 236);
-    border-radius: 0 0 15px 0 ;
-}
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .sidebar .hamburger-menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .profile {
+    padding: 20px;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .go-back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+  }
+  
+  /* 필요에 따라 추가적인 스타일링을 적용하세요 */
+  
+  

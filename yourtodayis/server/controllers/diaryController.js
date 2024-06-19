@@ -2,18 +2,17 @@ let diaryEntries = [];
 
 // 새로운 일기를 저장하는 함수
 const saveDiaryEntry = (req, res) => {
-  const { message } = req.body;
+  const { writer, message, createdAt,email } = req.body;
 
-  // 새로운 일기 항목 생성
+  // 받은 데이터를 다이어리 엔트리로 만듭니다
   const newEntry = {
-    id: diaryEntries.length + 1,
-    message: message
+    writer,
+    message,
+    createdAt,
+    email
   };
-
-  // 배열에 새로운 일기 추가
+   // 배열에 새로운 일기 추가
   diaryEntries.push(newEntry);
-
-  // 성공적인 응답 반환
   res.status(200).json({ message: '일기가 성공적으로 저장되었습니다.' });
 };
 

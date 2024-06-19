@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Trad:wght@100..400&display=swap');
 .logincontainer {
   position: relative; /* LoginForm과 BackgroundComponent의 위치 설정을 상대적으로 */
   height: 100vh;
@@ -20,11 +21,12 @@
 }
 .h2text{
   text-align: center;
+  /* font-family: "PT Sans", sans-serif; */
+  font-family: "Playwrite US Trad", cursive;
+  font-optical-sizing: auto;
+  
 }
-.h2text{
-  font-weight: bold;
 
-}
 .label {
   display: block;
   margin-bottom: 5px;

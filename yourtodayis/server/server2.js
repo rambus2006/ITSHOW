@@ -66,9 +66,22 @@ const diaryRouter = require('./routes/diary');
 // 기본 경로로 이동할 수 있도록 설정 
 app.use('/', indexRouter);
 
+// 다이어리 엔트리를 처리할 POST 엔드포인트 설정
+app.post('/api/diary', (req, res) => {
+  const { writer, message, createdAt } = req.body;
+
+  // 여기서는 받은 데이터를 처리합니다 (예: 데이터베이스에 저장)
+  console.log(`${writer}가 작성한 다이어리 내용 (${createdAt}): ${message}`);
+
+  // 성공 메시지를 응답합니다
+  res.status(200).json({ message: '다이어리 엔트리가 성공적으로 받아졌습니다!' });
+});
+
+
 // /api/diary 경로에 diaryRouter 등록
 app.use('/api/diary', diaryRouter);
 //추가한 부분 끝 
+
 
 // 서버 시작
 server.listen(PORT, () => {

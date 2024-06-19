@@ -1,17 +1,14 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const http = require('http');
 const socketIo = require('socket.io');
 const path = require('path');
-
-// 라우터 설정
-const indexRouter = require('./routes/index');
-const diaryRouter = require('./routes/diary');
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = 4000;
 
+// 로그인 화면
 // 더미 데이터 예시 (배열 형태)
 const users = [
   { id: 1, name: 'John Doe', email: 'john.doe@example.com', password: 'alflaAkrh'},
@@ -19,19 +16,12 @@ const users = [
   { id: 3, name: 'Mike Johnson', email: 'mike.johnson@example.com', password: 'alflaAkrh'}
 ];
 
-let diaryEntries = [];
-
 // CORS 설정
 app.use(cors({
+  credentials: true,
   origin: 'http://localhost:3000' // 허용할 출처를 여기에 지정
+
 }));
-
-// 미들웨어 등록
-app.use(bodyParser.json());
-
-// 라우터 등록
-app.use('/', indexRouter);
-app.use('/api/diary', diaryRouter);
 
 // HTTP 서버 생성
 const server = http.createServer(app);
@@ -47,25 +37,18 @@ const io = socketIo(server, {
 io.on('connection', (socket) => {
   console.log('새 클라이언트 연결');
 
-  socket.on('newUser', (name) => {
-    console.log(`${name} 님이 접속했습니다.`);
-    io.emit('update', { type: 'connect', name: name, message: `${name} 님이 접속했습니다.` });
-  });
+  socket.on('login', (data) => {
+    console.log('로그인 요청 수신:', data); 
+    const { email, password } = data;
+    const user = users.find(user => user.email === email && user.password === password);
+    const username = user.name;
+    
+    if (user) {
+      socket.emit('loginResponse', { success: true, message: '로그인 성공',name:username});
 
-  socket.on('message', (data) => {
-    console.log('메시지 수신:', data);
-
-    // 새로운 일기 항목 생성
-    const newEntry = {
-      id: diaryEntries.length + 1,
-      message: data.message
-    };
-
-    // 배열에 새로운 일기 추가
-    diaryEntries.push(newEntry);
-
-    // 서버에서 모든 클라이언트에게 메시지 전송
-    io.emit('update', { type: 'message', name: '익명', message: data.message });
+    } else {
+      socket.emit('loginResponse', { success: false, message: '로그인 실패' });
+    }
   });
 
   socket.on('disconnect', () => {
@@ -76,10 +59,17 @@ io.on('connection', (socket) => {
 // React 정적 파일 제공
 app.use(express.static(path.join(__dirname, 'build')));
 
-// 모든 요청을 React 앱으로 라우팅
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', '../../src/components/Login.jsx'));
-});
+//추가한 부분
+app.use(bodyParser.json());
+
+// 라우터 설정
+const indexRouter = require('./routes/index');
+const diaryRouter = require('./routes/diary');
+
+// 기본 경로로 이동할 수 있도록 설정 
+app.use('/', indexRouter);
+app.use('/api/diary',diaryRouter)
+
 
 // 서버 시작
 server.listen(PORT, () => {

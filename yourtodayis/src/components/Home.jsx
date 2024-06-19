@@ -11,10 +11,9 @@ import lineimg from './img/line.png'
 function Home() {
   
 
+  // 컴포넌트 이동
   const handleImageClick = () => {
     window.location.href="http://localhost:3000/Diary"
-    
-
   };
   // const handleCloseDiary = () => {
     
@@ -30,7 +29,7 @@ function Home() {
                 <img src={per1img} alt="" />
               </div>
               <div className='person1_src'>
-                <h4>김민정</h4>
+                <h4>임한별</h4>
                 <p>난 겨울이 그렇게 좋더라</p>
               </div>
             </div>

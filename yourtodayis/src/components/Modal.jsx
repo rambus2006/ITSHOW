@@ -1,3 +1,4 @@
+// 소켓 작업 전 컴포넌트  
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import axios from 'axios';
