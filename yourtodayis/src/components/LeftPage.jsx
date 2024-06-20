@@ -25,8 +25,8 @@ function LeftPage() {
           onSaveDiary={handleSaveDiary} // 저장 버튼 클릭 이벤트 핸들러 전달
         />
         {/* 댓글 기능(정렬이 안되서 보류) */}
-        <CommentSection/>
-      
+        {/* <CommentSection/> */}
+        {/* 댓글 기능 대신 사진...나중에 채팅 기능으로 변환할 예정  */}
       </main>
       
     </div>

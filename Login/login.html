@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .login-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 12px;
+            width: 600px; 
+            position: relative; 
+        }
+
+        .login-image {
+            margin-bottom: 30px;
+            width: 400px; 
+            height: 400px; 
+        }
+
+        .login-button {
+            background-image: url('image/LoginButton.png');
+            background-size: cover;
+            width: 110px; 
+            height: 40px; 
+            border: none;
+            cursor: pointer;
+            position: absolute; 
+            bottom: 115px; 
+            left: 370px; 
+        }
+
+        .login-button:hover {
+            background-image: url('image/LoginButtonClicked.png'); 
+        }
+
+
+        .input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .email {
+            width: 300px;
+            padding: 14px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            position: absolute;
+            top: -350px;
+            left: 150px;
+        }
+
+        .password {
+            width: 300px;
+            padding: 14px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            position: absolute;
+            top: -313px;
+            left: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="image/Login.png" alt="Login Image" class="login-image">
+        <br><br>
+        <div class="input-container">
+            <input type="text" class="email" value="jdhejd@naver.com" readonly>
+        </div>
+        <div class="input-container">
+            <input type="password" class="password" value="12341234" readonly>
+        <button class="login-button"></button>
+    </div>
+</body>
+</html>

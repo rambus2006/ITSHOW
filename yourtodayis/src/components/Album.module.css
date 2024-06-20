@@ -74,8 +74,26 @@
   grid-row: 1;
   transform: rotate(10deg);
 }
-.fahome{
+.home{
+    position: absolute;
     font-size: 40px;
     margin-top:10px;
     margin-left: 10px;
+    z-index: 999;
+    color:#B275FF;
   }
+  .fileinput{
+    /* background-color: #B275FF; */
+    background-color: aliceblue;
+  }
+  .fileinput label{
+    /* background-color: #B275FF; */
+  }
+  .filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}

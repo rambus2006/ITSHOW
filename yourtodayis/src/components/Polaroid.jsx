@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Polaroid.module.css';
 
+//이미지 카드를 만들어주는 컴포넌트 
 const Polaroid = ({ imageUrl, date, description }) => {
   return (
     <div className={style.card}>

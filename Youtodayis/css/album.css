@@ -66,12 +66,7 @@ html, body {
     height: 100%;
     margin: 0;
 }
-body {
-    background-image: url("../img/Background2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
+
 .navBtn {
     position: absolute;
     top: 60px;
