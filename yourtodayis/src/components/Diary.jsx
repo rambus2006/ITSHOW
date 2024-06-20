@@ -17,7 +17,6 @@ function Diary() {
     const fetchDiaryEntries = async () => {
       try {
         const response = await axios.get('http://localhost:4000/api/diary');
-        // console.log('서버 응답:', response.data); // 데이터를 확인하는 로그
         const data = response.data;
         setDiaryEntries(data); // 받아온 데이터를 상태에 저장
         

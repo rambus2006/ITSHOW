@@ -18,15 +18,7 @@ function LeftPage() {
   };
   return (
     <div>
-      
       <main className='main'>
-        
-        {/* Modal 컴포넌트 */}
-        {/* <Modal
-          diaryText={diaryText} // 입력된 일기 내용을 Modal 컴포넌트로 전달
-          onDiaryInputChange={handleDiaryInputChange} // 입력 변경 이벤트 핸들러 전달
-          onSaveDiary={handleSaveDiary} // 저장 버튼 클릭 이벤트 핸들러 전달
-        /> */}
         <SocketModel
           diaryText={diaryText} // 입력된 일기 내용을 Modal 컴포넌트로 전달
           onDiaryInputChange={handleDiaryInputChange} // 입력 변경 이벤트 핸들러 전달

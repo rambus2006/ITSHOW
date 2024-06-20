@@ -19,14 +19,17 @@
 }
 
 .sidebar-closed {
-  width: 0;
+  width: 100px;
   padding: 0;
 }
 
 .sidebar-closed .profile, 
 .sidebar-closed .date, 
 .sidebar-closed h2, 
+.sidebar-closed .fahome,
 .sidebar-closed h3 {
+  /* display: visibility; */
+  /* overflow: hidden; */
   display: none;
 }
 
@@ -99,16 +102,23 @@ body {
 
 input[id="menuicon"] {
   display: none;
+  
 }
 
-input[id="menuicon"] + label {
+ input[id="menuicon"] + label {
   display: block;
   width: 50px;
   height: 40px;
   position: relative;
   cursor: pointer;
-}
-
+} 
+/* input[id="menuicon"] + label {
+  display: block;
+  width: 50px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+} */
 input[id="menuicon"] + label span {
   display: block;
   position: absolute;
@@ -161,4 +171,11 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
 .bottom {
   bottom: 50%;
   transform: translateY(50%) rotate(-45deg);
+}
+
+.fahome{
+  position: absolute;
+  top: 12px;
+  left: 70px;
+  font-size: 50px;
 }

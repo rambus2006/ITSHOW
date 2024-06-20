@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    
+}
+.wave {
+    fill: none;
+    stroke: #B275FF;
+    stroke-width: 2;
+}
+.line{
+   width:100%;
+   height:auto;
+   position: absolute;
+
+}
+.container {
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+    overflow-x: hidden;
+    
+  }
+  @keyframes slideRightToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .row {
+    display: flex;
+    animation: slideRightToLeft 10s linear infinite; /* 10초 동안 오른쪽에서 왼쪽으로 슬라이드되는 애니메이션 */
+    /* width: max-content; 내용만큼의 너비를 가지도록 설정 */
+
+  }
+  .fahome{
+    font-size: 40px;
+    margin-top:10px;
+    margin-left: 10px;
+  }

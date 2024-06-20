@@ -11,7 +11,7 @@
     text-align: center;
     align-items: center; /* 세로 방향으로 가운데 정렬 */
     width:80vw;
-    height:72vh;
+    height:90vh;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr; /* 세로 3등분 */
     grid-template-rows: 1fr 1.2fr; /*가로 2등분 */
@@ -53,11 +53,28 @@
     width: 500px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .img-container:hover img {
+
+.img-container:hover img {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
+}
+.img-container2{
+  grid-column: 3;
+  grid-row: 2;
+  display: inline-block;
+  /* overflow: hidden; */
+  z-index: 999;
+}
+.img-container2 img {
+  width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.img-container2:hover img {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
   /* Diary 컴포넌트의 스타일 */
 .DiaryContainer {
   position: absolute;

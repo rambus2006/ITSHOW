@@ -1,0 +1,37 @@
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardImgTop {
+  width: 100%;
+  border-radius: 8px;
+  height: 300px; /* 고정된 높이 설정 */
+  object-fit: cover; /* 이미지가 카드에 맞*/
+}
+
+.cardBody {
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.cardText {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
