@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Diary from './components/Diary';
 import Index from './components/Index';
 import GetAPI from './components/GetAPI'
+import Album from './components/Album';
 
 const Router = () => {
 	return (
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path='/Home' element={<Home/>}/>
         <Route path='/Diary' element={<Diary/>}/>
         <Route path='/GetAPI' element={<GetAPI/>}/>
+        <Route path='/Album' element={<Album/>}/>
         {/* <Route path='/Sidebar' element={<Sidebar/>}/> */}
       </Routes>
     </BrowserRouter>

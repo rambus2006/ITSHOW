@@ -11,9 +11,9 @@ const PORT = 4000;
 // 로그인 화면
 // 더미 데이터 예시 (배열 형태)
 const users = [
-  { id: 1, name: 'John Doe', email: 'john.doe@example.com', password: 'alflaAkrh'},
-  { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', password: 'alflaAkrh'},
-  { id: 3, name: 'Mike Johnson', email: 'mike.johnson@example.com', password: 'alflaAkrh'}
+  { id: 1, name: '이승준', email: 'john.doe@example.com', password: 'alflaAkrh'},
+  { id: 2, name: '문태일', email: 'jane.smith@example.com', password: 'alflaAkrh'},
+  { id: 3, name: '임한별', email: 'mike.johnson@example.com', password: 'alflaAkrh'}
 ];
 
 // CORS 설정

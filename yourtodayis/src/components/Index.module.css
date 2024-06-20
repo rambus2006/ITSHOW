@@ -1,16 +1,19 @@
+*{
+  margin:0;
+  padding:0;
+}
+
 /* Index.module.css */
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Trad:wght@100..400&display=swap');
 .Text{
    /* 제목 아래로 내리는 방법 찾기  */
-    position: absolute;
-    white-space: nowrap; /* 텍스트 줄바꿈 금지 */
-    top:88%;
-    left:42%;
-    transform: -50% 0%;
-    /* font-family: "Playfair Display", serif;
-    font-optical-sizing: auto; */
-    font-family: "PT Serif", serif;
-    font-optical-sizing: auto;
+   position: fixed;
+   white-space: nowrap;
+   top: 85%;
+   left: 42%;
+   /* transform: translate(-50%, 0%); */
+   font-family: "PT Serif", serif;
+   font-optical-sizing: auto;
 }
 @keyframes blink {
     0% { opacity: 0.6; }
