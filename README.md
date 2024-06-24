@@ -7,12 +7,7 @@
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/975caa28-2838-4e70-9cca-8e155808afcb)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/151e598b-ab9f-4077-a3d6-6f81c59663fe)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/d989f1d6-88c2-43f1-b2f4-17b8c5999a0d)
-
-
-
-![image](https://github.com/rambus2006/ITSHOW/assets/101540710/c0ea0b39-770b-420b-baa2-83a7a106ddcb)
-![image](https://github.com/rambus2006/ITSHOW/assets/101540710/b336c446-2d56-4786-b99f-bd75c02e4580)
-
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/60413b13-629d-4284-86d4-3217aee21cab)
 
 ### 프로젝트 스펙 
 - Front : React (localhost:3000)
