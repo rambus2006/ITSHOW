@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import style from './Album.module.css'; // Assuming album.css is in the same folder as the component
 import BackgroundComponent from './BackgroundComponent2';
 import Polaroid from './Polaroid';
@@ -8,17 +8,19 @@ import r1 from './img/r1.jpg';
 import r2 from './img/r2.jpg';
 import r3 from './img/r3.jpg'; // Ensure different images for r3
 import r4 from './img/r4.png'; // Ensure different images for r3
-import r5 from './img/r5.jpg'
-import r6 from './img/r6.jpg'
-import r7 from './img/r7.jpg'
-import r8 from './img/r8.jpg'
+import r5 from './img/r5.jpg';
+import r6 from './img/r6.jpg';
+import r7 from './img/r7.jpg';
+import r8 from './img/r8.jpg';
+
 const Album = () => {
   const [picture, setPicture] = useState(null); // State to store uploaded picture
   const inputRef = useRef(null); // Ref to access file input element
+  const [timer, setTimer] = useState(60);  // 타이머 상태 변수
+  const timeoutRef = useRef(null);  // 타이머 참조 변수
 
   const gotohome = () => {
-    // Add logic to navigate to the previous screen
-    window.location.href="http://localhost:3000/Home"
+    window.location.href = "http://localhost:3000/Home";
   };
 
   const handleChangePicture = () => {
@@ -30,15 +32,48 @@ const Album = () => {
       };
       reader.readAsDataURL(file); // Read the file as a data URL
     }
+    resetTimer();
   };
 
   const handlePolaroidClick = () => {
     inputRef.current.click(); // Trigger click event on the file input
+    resetTimer();
   };
+
+  // 타이머 초기화 함수
+  const resetTimer = () => {
+    setTimer(60);  // 타이머를 60초로 재설정
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      window.location.href = "http://localhost:3000";
+    }, 60000);
+  };
+
+  // 사용자의 활동을 감지하는 이벤트 리스너 등록
+  useEffect(() => {
+    const handleUserActivity = () => {
+      resetTimer();
+    };
+
+    window.addEventListener('mousemove', handleUserActivity);
+    window.addEventListener('keydown', handleUserActivity);
+
+    resetTimer(); // 컴포넌트가 마운트될 때 타이머를 초기화
+
+    return () => {
+      window.removeEventListener('mousemove', handleUserActivity);
+      window.removeEventListener('keydown', handleUserActivity);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div>
-      <FaHome className={style.home} onClick={gotohome}/>
+      <FaHome className={style.home} onClick={gotohome} />
       <div className={style.container}>
         <div className={style.row}>
           <div className={style.r1}>
@@ -63,13 +98,13 @@ const Album = () => {
             />
           </div>
           <div className={style.r4}>
-          <input type="file" accept="image/*" className={style.fileinput} ref={inputRef} onChange={handleChangePicture} style={{ display: 'none' }} />
-          <div onClick={handlePolaroidClick}>
-            <Polaroid 
-              imageUrl={picture || r4}
-              title="Example Image 4"
-              description="2024-06-21"
-            />
+            <input type="file" accept="image/*" className={style.fileinput} ref={inputRef} onChange={handleChangePicture} style={{ display: 'none' }} />
+            <div onClick={handlePolaroidClick}>
+              <Polaroid
+                imageUrl={picture || r4}
+                title="Example Image 4"
+                description="2024-06-21"
+              />
             </div>
           </div>
         </div>
@@ -82,7 +117,6 @@ const Album = () => {
             />
           </div>
           <div className={style.r6}>
-
             <Polaroid
               imageUrl={r7}
               title="Example Image 6"
@@ -90,8 +124,6 @@ const Album = () => {
             />
           </div>
           <div className={style.r7}>
-            {/* Hidden file input */}
-            {/* <input type="file" accept="image/*" className={style.fileinput} ref={inputRef} onChange={handleChangePicture} style={{ display: 'none' }} /> */}
             <div onClick={handlePolaroidClick}>
               <Polaroid
                 imageUrl={r8}

@@ -9,18 +9,16 @@ const app = express();
 const PORT = 4000;
 
 // 로그인 화면
-// 더미 데이터 예시 (배열 형태)
 const users = [
-  { id: 1, name: '이승준', email: 'john.doe@example.com', password: 'alflaAkrh'},
-  { id: 2, name: '문태일', email: 'jane.smith@example.com', password: 'alflaAkrh'},
-  { id: 3, name: '임한별', email: 'mike.johnson@example.com', password: 'alflaAkrh'}
+  { id: 1, name: '이승준', email: 'john.doe@example.com', password: 'alflaAkrh' },
+  { id: 2, name: '문태일', email: 'jane.smith@example.com', password: 'alflaAkrh' },
+  { id: 3, name: '임한별', email: 'mike.johnson@example.com', password: 'alflaAkrh' }
 ];
 
 // CORS 설정
 app.use(cors({
   credentials: true,
   origin: 'http://localhost:3000' // 허용할 출처를 여기에 지정
-
 }));
 
 // HTTP 서버 생성
@@ -41,14 +39,23 @@ io.on('connection', (socket) => {
     console.log('로그인 요청 수신:', data); 
     const { email, password } = data;
     const user = users.find(user => user.email === email && user.password === password);
-    const username = user.name;
-    
-    if (user) {
-      socket.emit('loginResponse', { success: true, message: '로그인 성공',name:username});
+    const username = user ? user.name : null;
 
+    if (user) {
+      socket.emit('loginResponse', { success: true, message: '로그인 성공', name: username });
     } else {
       socket.emit('loginResponse', { success: false, message: '로그인 실패' });
     }
+  });
+
+  socket.on('saveDiary', (data) => {
+    console.log('일기 저장 요청 수신:', data);
+
+    // 데이터를 모든 클라이언트에게 브로드캐스트
+    io.emit('diarySaved', {
+      ...data,
+      createdAt: new Date().toLocaleString()
+    });
   });
 
   socket.on('disconnect', () => {
@@ -59,7 +66,7 @@ io.on('connection', (socket) => {
 // React 정적 파일 제공
 app.use(express.static(path.join(__dirname, 'build')));
 
-//추가한 부분
+// 추가한 부분
 app.use(bodyParser.json());
 
 // 라우터 설정
@@ -68,8 +75,7 @@ const diaryRouter = require('./routes/diary');
 
 // 기본 경로로 이동할 수 있도록 설정 
 app.use('/', indexRouter);
-app.use('/api/diary',diaryRouter)
-
+app.use('/api/diary', diaryRouter);
 
 // 서버 시작
 server.listen(PORT, () => {
