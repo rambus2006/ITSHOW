@@ -5,11 +5,9 @@
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/ff344331-d786-460f-96a3-0a0fc326e7e9)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/7ac8ff85-233f-42bf-bbf8-deef57d95694)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/975caa28-2838-4e70-9cca-8e155808afcb)
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/151e598b-ab9f-4077-a3d6-6f81c59663fe)
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/d989f1d6-88c2-43f1-b2f4-17b8c5999a0d)
 
-
-![image](https://github.com/rambus2006/ITSHOW/assets/101540710/2e6117e2-700e-49bf-84fd-d89e9af9ede2)
-(앨범 추가해야 함)
-![image](https://github.com/rambus2006/ITSHOW/assets/101540710/f3b8438b-c1a6-407b-bf47-75c534a7b325)
 
 
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/c0ea0b39-770b-420b-baa2-83a7a106ddcb)
