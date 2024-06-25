@@ -1,5 +1,12 @@
 # 너의 오늘은 
 
+### 프로젝트 소개 
+ IT쇼 출품작입니다. 커플들끼리 서로 일기를 교환할 수 있는 서비스입니다. 앨범기능을 통해 사진들을 넣을 수 있습니다. 
+ 
+### 프로젝트 스펙 
+- Front : React (localhost:3000)
+- Back : node.js (localhost:4000)
+
 ### demo 
 ---
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/ff344331-d786-460f-96a3-0a0fc326e7e9)
@@ -11,9 +18,7 @@
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/042c16b2-605c-4287-997b-47f8c71e417a)
 
 
-### 프로젝트 스펙 
-- Front : React (localhost:3000)
-- Back : node.js (localhost:4000)
+
 
 ### FE별 설명 
 | 컴포넌트명| 기능 | 세부기능(관련파일) | 설명 |
