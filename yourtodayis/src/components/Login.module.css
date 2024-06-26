@@ -44,8 +44,15 @@
   margin-left: 0 !important ;
   width: 100%;
   padding: 10px;
-  color: #fff;
+  color: #ffffff;
+  background-color: #bf88fd;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.kakaobutton{
+ text-align: center;
+ margin:10px;
+ border: none;
 }

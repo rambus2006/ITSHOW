@@ -7,6 +7,7 @@ import AlbumCover from './img/AlbumCover.png';
 import per1img from './img/p1img.png'
 import per2img from './img/p2img.png'
 import lineimg from './img/line.png'
+// import GetUser from "./GetUser";// GetUser를 사용하므로 import 추가
 
 function Home() {
   
@@ -17,6 +18,10 @@ function Home() {
   const handleAlbumClick = () => {
     window.location.href="http://localhost:3000/Album"
   };
+  const getname=() =>{
+    const name = sessionStorage.getItem("name");
+    return name;
+  }
   return (
     <div className="Home">
       <div className='elements'>
@@ -28,7 +33,7 @@ function Home() {
                 <img src={per1img} alt="" />
               </div>
               <div className='person1_src'>
-                <h4>임한별</h4>
+                <h4>{getname()}</h4>
                 <p>난 겨울이 그렇게 좋더라</p>
               </div>
             </div>
@@ -41,7 +46,7 @@ function Home() {
                   <img src={per2img} alt="" />
                 </div>
                 <div className='person2_src'>
-                  <h4>문태일</h4>
+                  <h4>임한별</h4>
                   <p>난 여름</p>
                 </div>
             </div>

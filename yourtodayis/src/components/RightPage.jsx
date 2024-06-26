@@ -6,12 +6,18 @@ const socket = io('http://localhost:4000'); // 서버의 주소와 포트에 맞
 
 const DiaryList = () => {
   const [diaries, setDiaries] = useState([]);
+  const sessionEmail = sessionStorage.getItem('email') || '';
 
   useEffect(() => {
+    
     // 일기 항목 수신
     socket.on('diarySaved', (entry) => {
-      setDiaries((prevDiaries) => [...prevDiaries, entry]);
+      if (entry.email !== sessionEmail) {
+        setDiaries((prevDiaries) => [...prevDiaries, entry]);
+      }
     });
+
+
 
     // 컴포넌트 언마운트 시 이벤트 리스너 정리
     return () => {

@@ -50,22 +50,12 @@ io.on('connection', (socket) => {
 
   socket.on('saveDiary', (data) => {
     console.log('일기 저장 요청 수신:', data);
-    
-    const { writer } = data;
 
-    // 입력한 사람이 서버에 등록된 사용자와 일치하는지 확인
-    const user = users.find(user => user.name === writer);
-
-    // 자신이 쓴 내용인 경우
-    if (user) {
-      console.log('자신이 쓴 내용은 저장하지 않음');
-    } else {
-      // 데이터를 모든 클라이언트에게 브로드캐스트
-      io.emit('diarySaved', {
-        ...data,
-        createdAt: new Date().toLocaleString()
-      });
-    }
+    // 현재 클라이언트를 제외한 모든 클라이언트에게 브로드캐스트
+    socket.broadcast.emit('diarySaved', {
+      ...data,
+      createdAt: new Date().toLocaleString()
+    });
   });
 
   socket.on('disconnect', () => {

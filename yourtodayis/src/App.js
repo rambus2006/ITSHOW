@@ -8,13 +8,14 @@ import Diary from './components/Diary';
 import Index from './components/Index';
 import GetAPI from './components/GetAPI'
 import Album from './components/Album';
-
+import Logintest from './components/LoginTest';
 const Router = () => {
 	return (
 	<BrowserRouter>                                    
       <Routes>                                           
         <Route path='/' element={<Index/>} />   
         <Route path='/Login' element={<Login/>}/>
+        <Route path='/Logintest' element={<Logintest/>}/>
         <Route path='/Home' element={<Home/>}/>
         <Route path='/Diary' element={<Diary/>}/>
         <Route path='/GetAPI' element={<GetAPI/>}/>

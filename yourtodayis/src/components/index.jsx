@@ -6,7 +6,7 @@ import styles from './Index.module.css';
 function Index() {
   // 로그인 창으로 이동
   function toLogin() {
-    window.location.href = "http://localhost:3000/Login";
+    window.location.href = "http://localhost:3000/Logintest";
   }
 
   return (
