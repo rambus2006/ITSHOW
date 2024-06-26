@@ -10,7 +10,7 @@
 ### demo 
 ---
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/ff344331-d786-460f-96a3-0a0fc326e7e9)
-![image](https://github.com/rambus2006/ITSHOW/assets/101540710/7ac8ff85-233f-42bf-bbf8-deef57d95694)
+![image](https://github.com/rambus2006/ITSHOW/assets/101540710/5dde4268-6324-4a5b-ac77-7b3aa16ab017)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/975caa28-2838-4e70-9cca-8e155808afcb)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/151e598b-ab9f-4077-a3d6-6f81c59663fe)
 ![image](https://github.com/rambus2006/ITSHOW/assets/101540710/d989f1d6-88c2-43f1-b2f4-17b8c5999a0d)
