@@ -6,6 +6,7 @@
 ### 프로젝트 스펙 
 - Front : React (localhost:3000)
 - Back : node.js (localhost:4000)
+- [프로젝트 바로가기]()
 
 ### demo 
 ---
