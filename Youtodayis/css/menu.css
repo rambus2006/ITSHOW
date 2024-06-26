@@ -1,0 +1,83 @@
+/* Hamberger Menu  */
+
+header {
+    position: relative;
+    width: 100%;
+    background-color: #333;
+  }
+  
+  #check_box {
+    display: none;
+  }
+  
+  label {
+    display: block;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+  
+  label span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  
+  #check_box:checked+label span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+    z-index: 1000;
+  }
+  
+  #check_box:checked+label span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #check_box:checked+label span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+    z-index: 1000;
+  }
+  
+  #side_menu {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  #check_box:checked~#side_menu {
+    right: 0;
+  }
+  
+  #side_menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #side_menu ul li {
+    padding: 8px 16px;
+  }
+  
+  #side_menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+  }
+  
+  #side_menu ul li a:hover {
+    background-color: #575757;
+  }

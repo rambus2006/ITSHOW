@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+#high {
+  margin-top: 50px;
+}
+
+#Myprofil,
+#Day,
+#Uprofil {
+  float: left;
+  width: 33%;
+  text-align: center;
+  color: aliceblue;
+  background-color: #1C2734;
+
+}
+
+#Myprofil img,
+#Uprofil img {
+  width: 200px;
+  height: 200px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+#Day {
+  margin-top: 100px;
+}
+
+#Diary,
+#Album {
+  background-image: url("../img/main.png");
+  background-size: cover;
+}
