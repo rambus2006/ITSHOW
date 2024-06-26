@@ -1,0 +1,25 @@
+.header {
+    position: absolute; /* 절대 위치로 설정 */
+    top: 0; /* 화면 맨 위로 이동 */
+    z-index: 999; /* 다른 요소 위에 위치 */
+    right: 10px;
+    text-align: center;
+}
+.Rname {
+    margin-top: 20px; /* 이름 텍스트와의 간격 설정 */
+    left:400px;
+}
+.line {
+    margin-top: 10px; /* 수평 선과의 간격 설정 */
+    margin-right:0;
+    border-top: 3px solid #c3c3c3; /* 선의 두께, 스타일(실선), 색상 설정 */
+    width:580px;
+}
+.main{
+    position: absolute;
+    right:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 200px;
+}

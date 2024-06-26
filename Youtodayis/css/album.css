@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.wave {
+    fill: none;
+    stroke: #B275FF;
+    stroke-width: 2;
+}
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    margin: 100px auto;
+    position: relative;
+    cursor: pointer;
+}
+.img1 {
+    position: relative;
+    left: 260px;
+    top: 100px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.line > svg {
+    margin-top: 30vh;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.img3 {
+    left: -700px;
+    top: -1500px;
+}
+.img4 {
+    left: -600px;
+    top: -1400px;
+}
+.img5 {
+    left: -200px;
+    top: -1700px;
+}
+.img6 {
+    left: 60px;
+    top: -2200px;
+}
+.img7 {
+    left: 1100px;
+    top: -2100px;
+}
+.img8 {
+    left: 1200px;
+    top: -2100px;
+}
+.img9 {
+    left: 1400px;
+    top: -2700px;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-image: url("../img/Background2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.navBtn {
+    position: absolute;
+    top: 60px;
+    cursor: pointer;
+}
+#leftBtn {
+    left: 280px;
+}
+#dateText {
+    position: absolute;
+    left: 400px;
+    top: 45px;
+    font-size: 50px;
+    font-weight: lighter;
+    color: black;
+}
+#rightBtn {
+    left: 670px;
+}
+.TextField_1, .TextField_2, .TextField_3, .TextField_4, .TextField_5, .TextField_6, .TextField_7 {
+    position: absolute;
+    font-size: 15px;
+    color: #B275FF;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    resize: none;
+    overflow: hidden;
+}
+.TextField_1 {
+    left: 152px;
+    top: 390px;
+    transform: rotate(10deg);
+}
+.TextField_2 {
+    left: 540px;
+    top: 372px;
+    transform: rotate(-5deg);
+}
+.TextField_3 {
+    left: 873px;
+    top: 380px;
+    transform: rotate(8deg);
+}
+.TextField_4 {
+    left: 1293px;
+    top: 378px;
+    transform: rotate(-10deg);
+}
+.TextField_5 {
+    left: 308px;
+    top: 736px;
+    transform: rotate(-7deg);
+}
+.TextField_6 {
+    left: 612px;
+    top: 742px;
+    transform: rotate(8deg);
+}
+.TextField_7 {
+    left: 1060px;
+    top: 730px;
+    transform: rotate(-10deg);
+}
+html, body {
+    min-height: 100%;
+    max-height: fit-content;
+}

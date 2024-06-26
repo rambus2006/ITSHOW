@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+US+Trad:wght@100..400&display=swap');
+.logincontainer {
+  position: relative; /* LoginForm과 BackgroundComponent의 위치 설정을 상대적으로 */
+  height: 100vh;
+
+}
+
+.LoginForm {
+  top: 50%; /* 부모 요소의 상단에서 50% 떨어진 위치에 요소의 상단을 배치합니다. */
+  left: 50%; /* 부모 요소의 왼쪽에서 50% 떨어진 위치에 요소의 왼쪽을 배치합니다. */
+  transform: translate(-50%, -50%); /* 요소의 중심을 기준으로 -50%만큼 이동하여 요소를 가운데 정렬합니다. */
+  position: absolute; /* 상대적인 위치 설정 */
+  z-index: 5; /* 배경 이미지 위에 위치 */
+  width: 400px;
+  margin: 0 auto; /* 수평 중앙 정렬 */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.h2text{
+  text-align: center;
+  /* font-family: "PT Sans", sans-serif; */
+  font-family: "Playwrite US Trad", cursive;
+  font-optical-sizing: auto;
+  
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.button1 {
+  margin-left: 0 !important ;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

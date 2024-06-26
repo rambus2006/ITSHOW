@@ -1,0 +1,59 @@
+.comment-section {
+    margin: 20px;
+  }
+
+  .comment-section form {
+    display: flex;
+    flex-direction: row; /* 수평 정렬을 위해 row로 설정 */
+    align-items: center; /* 수직 정렬을 위해 center로 설정 */
+    column-gap: 30px;
+  }
+  
+  textarea {
+    /* textarea가 가능한 모든 공간을 차지하도록 설정 */
+    height: 100px; /* 높이를 100px로 설정 */
+    padding: 10px; /* 패딩을 추가하여 텍스트와 경계 사이에 여백을 둠 */
+    font-size: 16px; /* 텍스트 크기를 16px로 설정 */
+    border-radius: 5px; /* 모서리를 둥글게 함 */
+    border: 1px solid #ccc; /* 경계를 회색으로 설정 */
+    resize: vertical; /* 세로 방향으로만 크기 조정 가능하도록 설정 */
+  }
+  
+  button {
+    margin-left: 30px !important; /* 버튼과 textarea 사이에 여백을 둠 */
+    padding: 10px 20px; /* 버튼의 패딩 설정 */
+    font-size: 16px; /* 버튼의 텍스트 크기 설정 */
+    border: none; /* 경계를 없앰 */
+    border-radius: 5px !important; /* 모서리를 둥글게 함 */
+    background-color: #ddbfff; /* 버튼의 배경색 설정 */
+    color: white; /* 버튼의 텍스트 색상 설정 */
+    cursor: pointer; /* 마우스 커서를 포인터로 설정 */
+  }
+  
+  button:hover {
+    background-color: #7a00b3; /* 버튼에 마우스를 올렸을 때 배경색 변경 */
+  }
+  
+  .comment-list {
+    margin-top: 20px;
+  }
+  
+  .comment-list ul {
+    list-style-type: none; /* 리스트 스타일을 없앰 */
+    padding: 0;
+  }
+  
+  .comment-list li {
+    margin-bottom: 10px; /* 리스트 아이템 사이에 여백 추가 */
+    padding: 10px; /* 리스트 아이템의 패딩 설정 */
+    border: 1px solid #ccc; /* 리스트 아이템의 경계 설정 */
+    border-radius: 5px; /* 리스트 아이템의 모서리를 둥글게 함 */
+  }
+/* 
+.commentList  li{
+  list-style: none;
+  display: block;
+  position: absolute;
+  right: 20vh;
+  
+} */
