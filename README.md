@@ -21,22 +21,20 @@
 
 
 
-### FE별 설명 
-| 컴포넌트명| 기능 | 세부기능(관련파일) | 설명 |
+### 파일별 설명 
+| 파일명| 경로 | 기능(역할) | 사용툴 or 명령어 |
 |---|---|---|---|
-|BackgroundComponent2.jsx|배경이미지||배경이미지를 보여주는 컴포넌트|
-|Diary.jsx|일기장|Diary.css|내용 8|
-|내용 9|내용 10|내용 11|내용 12|
+|App.js|yourtodayis| 클라이언트 측 라우팅을 설정하여 다양한 경로에 대해 각각의 컴포넌트를 렌더링하는 역할 | { BrowserRouter, Routes, Route } from 'react-router-dom'|
+|BackgroundComponent2.jsx| yourtodayis/components | 그라데이션배경이미지를 로드하는 컴포넌트. | - |
+|BackgroundComponent3.jsx| yourtodayis/components | 홈화면의 남색 배경이미지를 로드하는 컴포넌트 | - |
+|index.jsx| " | 화면 아무곳이나 누르면 로그인 페이지로 리다이렉트하는 React 컴포넌트를 정의하는 역할.| - |
+|Login.jsx| " | 이메일/비밀번호 로그인과 카카오 로그인을 처리하고, 로그인 후 사용자 정보를 가져와 화면에 표시하는 React 컴포넌트를 정의하는 역할|useState(): 상태관리, useEffect(): 컴포넌트가 렌더링 될 때마다 특정작업을 실행할 수 있게 하는 훅|
+|Home.jsx| " | 다이어리나 앨범 페이지로 이동할 수 있는 홈 화면을 만들고, 배경 이미지와 사용자 정보를 표시하는 역할| useState: 이메일, 비번, 로그인 후 상태를 관리 | 
+|Diary.jsx| " | 사용자의 일기를 서버에서 가져와 화면에 표시하고, 사용자가 일정 시간 동안 활동하지 않으면 자동으로 홈 페이지로 이동시키는 역할 | useState:diaryEntries라는 상태를 선언하고, 이 상태는 일기 데이터를 저장/useEffect: 컴포넌트가 처음 렌더링될 때 일기 데이터를 가져오고,사용자의 활동을 감지하고, 사용자가 활동할 때마다 타이머를 초기화한다./useRef:타이머를 참조하고, 이를 통해 타이머를 초기화하거나 제거하는 역할을 한다.|
+|LeftPage.jsx | " | 일기장 페이지에서 사용자가 일기를 입력하고 저장할 수 있는 화면을 구성하는 컴포넌트이다. SocketModel 컴포넌트를 통해 일기 내용 입력 및 저장 기능이 구현된다.|useState :diaryText 상태를 생성하고, 해당 상태를 업데이트할 수 있는 setDiaryText 함수를 제공한다.|
+|RightPage.jsx| " |서버로부터 실시간으로 받은 일기 목록을 화면에 표시하는 컴포넌트입니다. Socket.io를 사용하여 서버와 클라이언트 간의 실시간 통신을 구현하고, useEffect 훅을 이용하여 컴포넌트의 라이프사이클 이벤트를 관리합니다.|Socket.io:클라이언트에서 서버와의 실시간 통신을 위해 Socket.io 클라이언트를 설정 / useState: diaries라는 상태 변수를 선언하고, 초기값은 빈 배열([])로 설정한다. 이 상태는 서버로부터 받은 일기 목록을 관리한다./useEffect :socket.on('diarySaved', ...)은 서버에서 'diarySaved'라는 이벤트를 수신하여 새로운 일기가 저장될 때마다 실행되고, 새로운 일기는 상태에 추가된다.socket.off('diarySaved')는 컴포넌트가 언마운트될 때 이벤트 리스너를 정리한다. 
 
-### BE별 설명
-|폴더| 파일명 | 기능설명 | 비고 |
-|---|---|---|---|
-| - |server.js |서버에 처음 진입했을 때 실행되는 파일 ||
-| routes | index.js | 기본 라우터 파일||
-| routes | messages.js | 메시지를 보냈을 때 처리하는 라우터 파일||
-| controllers |userController.js| 유저 정보 컨트롤러 ||
-| controllers |messageController.js|메시지 정보 컨트롤러||
-| data | user.js | 임의의 유저 정보 api|
+
 
 ### 파일구조
 ```bash
@@ -59,18 +57,20 @@
 │     ├── BackgroundComponent2.jsx
 │     ├── Login.jsx : 처음 들어갔을 때의 화면
 │     │
-│     ├── Diary.jsx : server.js 에서 이름 fetch 해서 가져와서 표시해주는 리액트 코드 
+│     │
+│     ├── Home.jsx 
+│     │   ├── Diary.jsx : server.js 에서 이름 fetch 해서 가져와서 표시해주는 리액트 코드 
 │     │      ├── LeftPage.jsx
 │     │      │     ├── Moodal.jsx
 │     │      │     └── CommentSection.jsx
-│     │      └── RightPage.jsx
-│     │           ├── 서버를 통해 상대가 쓴 일기를 확인 가능 
-│     │           └── CommentSection.jsx
-│     ├── Home.jsx 
-│     └── Sidebar
+│     │      ├── RightPage.jsx
+│     │      │     ├── 서버를 통해 상대가 쓴 일기를 확인 가능 
+│     │      │     └── CommentSection.jsx
+             └── Sidebar
+│     
 ├── img : 이미지 파일 
-├── App.js : Home 컴포넌트 로드
-├── App.css : 기본 설정 파일
+├── App.js : 라우터로 각 컴포넌트별 경로 지정, 기본적으로 index.js 파일 로드 
+├── App.css : 기본 스타일 설정 파일
 │   
 └── run.sh
 ``` 
