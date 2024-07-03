@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';   // Login 컴포넌트를 ./components/Login에서 임포트
@@ -24,3 +25,33 @@ const Router = () => {
 };
 
 export default Router;   // Router 컴포넌트를 외부로 내보냄
+=======
+// 라우터 지정도 여기서 
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//import Login from /'./components/Login';
+import Login from './components/Login';
+import Home from './components/Home';
+import Diary from './components/Diary';
+import Index from './components/Index';
+import GetAPI from './components/GetAPI'
+import Album from './components/Album';
+
+const Router = () => {
+	return (
+	<BrowserRouter>                                    
+      <Routes>                                           
+        <Route path='/' element={<Index/>} />   
+        <Route path='/Login' element={<Login/>}/>
+        <Route path='/Home' element={<Home/>}/>
+        <Route path='/Diary' element={<Diary/>}/>
+        <Route path='/GetAPI' element={<GetAPI/>}/>
+        <Route path='/Album' element={<Album/>}/>
+        {/* <Route path='/Sidebar' element={<Sidebar/>}/> */}
+      </Routes>
+    </BrowserRouter>
+	);
+};
+
+export default Router;
+>>>>>>> 8ac78590c6c92844322d6d71e82ee0439cb14cd3
