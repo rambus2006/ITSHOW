@@ -68,6 +68,7 @@ const Logintest = () => {
         console.log('Kakao login success', authObj);
         setKakaoToken(authObj.access_token);
         setLoginResult(true);
+        window.location.href = "http://localhost:3000/Home";
       },
       fail: function(err) {
         console.error('Kakao login failed', err);
