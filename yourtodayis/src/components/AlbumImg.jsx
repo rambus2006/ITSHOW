@@ -8,7 +8,7 @@ import { FaHome } from "react-icons/fa"; // 홈 아이콘을 가져옵니다.
 
 import r1 from './img/r1.jpg'; // 이미지 파일을 가져옵니다.
 import r2 from './img/r2.jpg'; // 이미지 파일을 가져옵니다.
-import r3 from './img/r3.jpg'; // 이미지 파일을 가져옵니다. (서로 다른 이미지로 설정 필요)
+import line from './img/Vector 15.png'; // 이미지 파일을 가져옵니다. (서로 다른 이미지로 설정 필요)
 import r4 from './img/r4.png'; // 이미지 파일을 가져옵니다. (서로 다른 이미지로 설정 필요)
 import r5 from './img/r5.jpg'; // 이미지 파일을 가져옵니다.
 import r6 from './img/r6.jpg'; // 이미지 파일을 가져옵니다.
@@ -142,17 +142,7 @@ const Album = () => {
         </div>
       </div>
       <div className={style.line}>
-        <svg width="100%" height="1200">
-          <path className={style.wave} d="
-              M0,500 
-              Q200,600 400,400
-              T800,600
-              T1200,400
-              T1600,600
-              T2000,400
-              T2400,600
-          " />
-        </svg>
+        <img src={line} alt=""/>
       </div>
       <BackgroundComponent /> {/* 배경 컴포넌트 */}
     </div>

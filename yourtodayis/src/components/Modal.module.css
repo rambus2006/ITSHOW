@@ -21,11 +21,7 @@ p{
   justify-content: space-between;
 }
 .savebutton{
-<<<<<<< HEAD
   background-color: #bf88fd;
-=======
-  background-color: gray;
->>>>>>> 8ac78590c6c92844322d6d71e82ee0439cb14cd3
 }
 .exitbutton{
   background-color:#ddbfff ;
@@ -48,7 +44,6 @@ p{
   height: 20px; /* 커서의 높이 */
   background-color: black; /* 커서의 색상 */
   animation: blink 1s step-start infinite;
-<<<<<<< HEAD
 }
 .modalContainer{
   position: fixed;
@@ -66,6 +61,4 @@ p{
   height:40px; 
   border-radius:30px;
   border: none;
-=======
->>>>>>> 8ac78590c6c92844322d6d71e82ee0439cb14cd3
 }
